@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded",()=>{let n=document.getElementById("obfuscateBtn"),e=document.getElementById("resetBtn"),t=document.getElementById("luaInput"),r=document.getElementById("luaOutput");function a(){let n="abcdefghijklmnopqrstuvwxyz";return n.charAt(Math.floor(Math.random()*n.length))}function l(n){let e="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",t="_";for(let r=0;r<n;r++)t+=e.charAt(Math.floor(Math.random()*e.length));return t}function o(n){if(!n.trim())return"-- Please paste a valid script first!";let e=Math.floor(100*Math.random())+30,t="";for(let r=0;r<n.length;r++)t+=n.charCodeAt(r)+e+a(),r<n.length-1&&(t+=",");let o=l(7),i=l(6),d=l(8),s=l(5),u=l(8),c=l(5),E=l(6),g=l(6),f=l(6),m=`-- ==========================================
 `;return m+=`--  PROTEGER CON ENCRYPT X (NEXUS ENGINE v3) 
-`,m+=`--  STATUS: JUNK-BYTE STREAM INJECTION       
+`,m+=`--  STATUS: BY DIOS CON NOSOTROS       
 `,m+=`-- ==========================================
 
 `,m+=`local ${o} = {
