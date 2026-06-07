@@ -1,0 +1,84 @@
+/* Reset básico para que se vea igual en cualquier teléfono o PC */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace; /* Fuente estilo hacker */
+}
+
+/* Fondo oscuro general de la página */
+body {
+    background-color: #0a0f1d;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* El contenedor principal (La tarjeta del panel) */
+.container {
+    background-color: #111827;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Título NexusOdfuscador */
+h1 {
+    color: #ef4444; /* Rojo premium */
+    font-size: 24px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+/* Subtítulo */
+.subtitle {
+    color: #9ca3af;
+    font-size: 12px;
+    margin-bottom: 24px;
+}
+
+/* La caja de texto gigante para el script */
+textarea {
+    width: 100%;
+    height: 250px;
+    background-color: #070a13;
+    border: 1px solid #1f2937;
+    border-radius: 8px;
+    color: #34d399; /* Texto verde brillante al escribir */
+    padding: 15px;
+    font-size: 14px;
+    resize: none;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+/* Cambia el color del texto de guía dentro de la caja */
+textarea::placeholder {
+    color: #4b5563;
+}
+
+/* El botón rojo de Obfuscate */
+button {
+    width: 100%;
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+/* Efecto cuando se presiona el botón */
+button:active {
+    background-color: #dc2626;
+}
