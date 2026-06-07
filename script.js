@@ -1,48 +1,10 @@
-document.addEventListener("DOMContentLoaded",()=>{let n=document.getElementById("obfuscateBtn"),e=document.getElementById("resetBtn"),t=document.getElementById("luaInput"),r=document.getElementById("luaOutput");function a(){let n="abcdefghijklmnopqrstuvwxyz";return n.charAt(Math.floor(Math.random()*n.length))}function l(n){let e="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",t="_";for(let r=0;r<n;r++)t+=e.charAt(Math.floor(Math.random()*e.length));return t}function o(n){if(!n.trim())return"-- Please paste a valid script first!";let e=Math.floor(100*Math.random())+30,t="";for(let r=0;r<n.length;r++)t+=n.charCodeAt(r)+e+a(),r<n.length-1&&(t+=",");let o=l(7),i=l(6),d=l(8),s=l(5),u=l(8),c=l(5),E=l(6),g=l(6),f=l(6),m=`-- ==========================================
-`;return m+=`--  PROTEGER CON ENCRYPT X (NEXUS ENGINE v3) 
-`,m+=`--  STATUS: BY DIOS CON NOSOTROS       
-`,m+=`-- ==========================================
-
-`,m+=`local ${o} = {
-`,m+=`    [1] = loadstring,
-`,m+=`    [2] = setfenv,
-`,m+=`    [3] = error,
-`,m+=`    [4] = getfenv,
-`,m+=`    [5] = string.char,
-`,m+=`    [6] = string.gmatch,
-`,m+=`    [7] = string.match
-`,m+=`}
-
-`,m+=`local ${i} = setmetatable({}, {
-`,m+=`    __index = function(t, k)
-`,m+=`        if ${o}[k] then return ${o}[k] end
-`,m+=`        return _G[k] or ${o}[4]()[k]
-`,m+=`    end,
-`,m+=`    __newindex = function(t, k, v)
-`,m+=`        ${o}[3]("Nexus Protection: Anti-Tamper Triggered")
-`,m+=`    end,
-`,m+=`    __metatable = "Protected by Nexus Matrix Engine v3"
-`,m+=`})
-
-`,m+=`-- [ CADENA DE BYTES TOTALMENTE MEZCLADA CON LETRAS ALEATORIAS ] --
-`,m+=`local ${d} = "${t}"
-`,m+=`local ${s} = ${e}
-`,m+=`local ${u} = ""
-
-`,m+=`-- Extractor ultra r\xe1pido: Remueve las letras basura y revierte la matem\xe1tica
-`,m+=`for ${c} in ${o}[6](${d}, "([^,]+)") do
-`,m+=`    -- Filtramos usando patrones de Lua para extraer \xdaNICAMENTE los n\xfameros, ignorando las letras pegadas
-`,m+=`    local ${E} = tonumber(${o}[7](${c}, "%d+"))
-`,m+=`    if ${E} then
-`,m+=`        ${u} = ${u} .. ${o}[5](${E} - ${s})
-`,m+=`    end
+document.addEventListener("DOMContentLoaded",()=>{let e=document.getElementById("obfuscateBtn"),t=document.getElementById("resetBtn"),n=document.getElementById("luaInput"),r=document.getElementById("luaOutput");function l(){let e="abcdefghijklmnopqrstuvwxyz";return e.charAt(Math.floor(Math.random()*e.length))}function o(e){let t="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",n="_";for(let r=0;r<e;r++)n+=t.charAt(Math.floor(Math.random()*t.length));return n}function a(e){if(!e.trim())return"-- Error";let t=Math.floor(100*Math.random())+30,n="";for(let r=0;r<e.length;r++)n+=e.charCodeAt(r)+t+l()+(r<e.length-1?",":"");let a=o(7),d=o(6),u=o(8),c=o(5),i=o(8),f=o(5),s=o(6),g=o(6),h=o(6),m=`-- NexusOfuscator
+`;return m+=`local ${a} = {[1]=loadstring,[2]=setfenv,[3]=error,[4]=getfenv,[5]=string.char,[6]=string.gmatch,[7]=string.match}
+`,m+=`local ${d} = setmetatable({},{__index=function(t,k) if ${a}[k] then return ${a}[k] end return _G[k] or ${a}[4]()[k] end,__newindex=function(t,k,v) ${a}[3]("Error") end,__metatable="NexusOfuscator"})
+`,m+=`local ${u}="${n}" local ${c}=${t} local ${i}=""
+`,m+=`for ${f} in ${a}[6](${u}, "([^,]+)") do
+`,m+=`local ${s}=tonumber(${a}[7](${f}, "%d+"))
+`,m+=`if ${s} then ${i}=${i}..${a}[5](${s}-${c}) end
 `,m+=`end
-
-`,m+=`local ${g}, ${f} = ${i}[1](${u})
-`,m+=`if ${g} then
-`,m+=`    ${i}[2](${g}, ${i})
-`,m+=`    ${g}()
-`,m+=`else
-`,m+=`    ${i}[3]("Nexus Integrity Fault: " .. tostring(${f}))
-`,m+=`end
-`}n.addEventListener("click",()=>{let n=t.value,e=o(n);r.value=e}),e.addEventListener("click",()=>{t.value="",r.value=""})});
+`,m+=`local ${g},${h}=${d}[1](${i})
+`,m+=`if ${g} then ${d}[2](${g},${d}) ${g}() else ${d}[3](tostring(${h})) end`}e.addEventListener("click",()=>{r.value=a(n.value)}),t.addEventListener("click",()=>{n.value="",r.value=""})});
